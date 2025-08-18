@@ -4,14 +4,15 @@ import mediapipe as mp
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
 
-# Abrir webcam
-cap = cv2.VideoCapture(0, cv2.CAP_DSHOW) # Usar CAP_DSHOW para evitar problemas con la cámara en Windows
+# Abrir webcam con DirectShow para que sea rápido en Windows
+cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 if not cap.isOpened():
     print("No se pudo abrir la cámara 0")
-else:
-    print("Cámara abierta con éxito")
-cap.release()
+#else:
+#    print("Cámara abierta con éxito")
+#cap.release()
+    exit()
 
 with mp_pose.Pose(min_detection_confidence=0.5,
                   min_tracking_confidence=0.5) as pose:
