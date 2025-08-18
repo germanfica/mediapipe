@@ -1,9 +1,8 @@
 # mediapipe
 
-## Requirements
+## Prerequisites
 
 - Python 3.10.0
-- Mediapipe 0.10.5
 
 ## Install
 
