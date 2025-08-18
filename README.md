@@ -3,6 +3,7 @@
 ## Requirements
 
 - Python 3.10.0
+- Mediapipe 0.10.5
 
 ## Run
 
