@@ -19,7 +19,7 @@ pip install -r requirements.txt
 python demo_webcam.py
 ```
 
-## 
+## Uninstall
 
 ```
 pip list
