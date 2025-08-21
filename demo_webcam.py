@@ -14,7 +14,12 @@ if not cap.isOpened():
 #cap.release()
     exit()
 
-with mp_pose.Pose(min_detection_confidence=0.5,
+# model_complexity:
+# 0 = Lite (rápido, menos preciso)
+# 1 = Full (default, balanceado)
+# 2 = Heavy (más pesado, más lento, máxima precisión)
+with mp_pose.Pose(model_complexity=1,
+                  min_detection_confidence=0.5,
                   min_tracking_confidence=0.5) as pose:
     while cap.isOpened():
         ret, frame = cap.read()
